@@ -1,0 +1,98 @@
+<% layout("layouts/boilerplate") %>
+<body class="show-page">
+    <div class="row">
+        <div class="col-6 mx-auto">
+            <h2 class="text-center mt-4 mb-4">Your Perfect Getaway.</h2>
+            <div class="card">
+                <img class="card-img-top show-image" src="<%= listing.image.url %>" alt="Listing Image">
+                <div class="card-body show-card-body">
+                    <p class="card-text show-card-text">
+                        <b><%= listing.title %></b><hr>
+                        Owned by @<%= listing.owner.username %><hr>
+                        <%= listing.description %> <hr>
+                        &#8377; <%= listing.price.toLocaleString("en-IN") %> / night<hr>
+                        <%= listing.location %> <hr>
+                        <%= listing.country %> <hr>
+                    </p>
+                </div>
+            </div>
+       
+            <% if (currUser && currUser._id.equals(listing.owner._id)) { %>
+            <div class="btns d-flex justify-content-center mt-4 mb-5">
+                <form method="get" action="/listings/<%=listing._id%>/edit">
+                    <button class="btn btn-dark me-2">Edit Listing</button> 
+                </form>
+                <form method="post" action="/listings/<%=listing._id%>?_method=DELETE">
+                    <button class="btn btn-dark ms-2">Delete Listing</button> 
+                </form>
+            </div>
+  
+            <% } %>
+    
+        
+            <% if (listing.reviews.length>0) { %>
+            <div class="reviews-container">
+                <h4 class="mb-4">User Testimonials</h4>
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-2">
+                    <% for(let review of listing.reviews) { %>
+                    <div class="col mb-4">
+                        <div class="card">
+                            <div class="card-body reviews-card-body">
+                                <h5 class="card-title">
+                                    <% for (let i = 0; i < review.rating; i++) { %>
+                                        <i class="fas fa-star text-warning"></i>
+                                    <% } %>
+                                </h5>
+                                <p class="card-text"><%= review.comment %></p>
+                                <p class="card-subtitle text-muted"> @<%= review.author.username %></p>
+
+                                <% if (currUser && currUser._id.equals(review.author._id)) { %>
+                                <form method="post" action="/listings/<%=listing._id%>/reviews/<%= review._id %>?_method=DELETE">
+                                    <button class="mb-2 mt-3">Delete</button>
+                                </form>
+                                <% } %>
+                            </div>
+                        </div>
+                    </div>
+                    <% } %>
+                </div>
+            </div>
+            <% } %>
+            
+            
+            <% if (currUser) {  %>
+            <hr>
+            <div class="col-6 mx-auto">
+                <h3 class="text-center">Leave a Review</h3>
+                <form method="post" action="/listings/<%=listing._id%>/reviews" class="needs-validation" novalidate>
+                    <div class="mb-3">
+                        <label for="rating" class="form-label">Rating</label>
+                        <input class="form-control" id="rating" name="review[rating]" min="1" max="5" required>
+                        <div class="valid-feedback">Great choice! Your rating is valid.</div>
+                        <div class="invalid-feedback">Oops! Please enter a valid rating between 1 and 5</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="comment" class="form-label">Review</label>
+                        <textarea class="form-control" id="comment" name="review[comment]" rows="5" required></textarea>
+                        <div class="valid-feedback">Thanks for sharing your thoughts!</div>
+                        <div class="invalid-feedback">Uh oh! Please provide your review.</div>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary mb-5 mt-4 submit-review-btn">Submit Review</button>
+                    </div>
+                </form>
+            </div>
+            <% } %>
+            <div class="mb-3">
+                <h3 class="text-center">Where you'll be</h3>
+                <div id="map"></div>
+            </div>
+        </div>
+    </div>    
+    <script>
+        const mapToken = "<%= process.env.MAP_TOKEN %>";
+        const coordinates = JSON.parse('<%- JSON.stringify(listing.geometry.coordinates) %>');
+       
+    </script>
+    <script src="/js/map.js"></script>
+</body>

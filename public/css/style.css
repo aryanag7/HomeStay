@@ -1,0 +1,344 @@
+body{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS' !important;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+
+}
+.container{
+    flex: 1;
+
+}
+
+.navbar{
+    height: 5rem;
+}
+
+.navbar-custom{
+    background-color: white !important;
+}
+
+.navbar-brand{
+    font-size: 1.5rem !important;
+    font-weight: 600 !important;
+    color: #096f0d !important;
+    /* color: #C5E1A5 !important; */
+    
+}
+.nav-link{
+    color: black !important;
+    font-size: 1.15rem  !important;
+}
+
+.new-page{
+    background-color:#fef6e6 ;
+}
+.edit-page{
+    background-color:#fef6e6 ;
+}
+.show-page{
+    background-color:#fef6e6 ;
+}
+.show-page .show-card-body{
+    background-color:#fef6e6 !important;
+}
+.f-info{
+    height: 8rem;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap:0.875rem;
+    color: whitesmoke;
+
+}
+.f-info-links a{
+    text-decoration: none;
+}
+.f-info-links a:hover{
+    text-decoration: underline;
+}
+
+.f-info-socials i{
+    font-size: 1.3rem;
+    margin-right: 1rem;
+}
+
+/* CARDS */
+.card{
+    border: none !important;
+    margin-bottom: 2rem;
+ 
+ 
+}
+.card-img-top{
+    border-radius: 13px !important;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.card-img-top-wrapper{
+    background-color: #f8ebd3 !important;
+
+}
+.card-body{
+    padding: 0 !important;
+
+ 
+}
+.card-text p{
+    font-weight: 400 !important;
+}
+.row a{
+    text-decoration: none;
+}
+.card-img-overlay{
+    opacity: 0;
+}
+.card-img-overlay:hover{
+    opacity: 0.3;
+    background-color: #f8ebd3;
+}
+
+.index-page {
+    background-color: #f8ebd3 ;
+}
+.index-card-body{ 
+    background-color: #f8ebd3 ;
+    padding-top: 0.5rem !important;
+
+}
+
+
+
+.index-heading{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif !important ;
+    margin-bottom: 2rem;
+}
+.index-page-card{
+    transition: transform 0.3s ease;
+}
+.index-page-card:hover {
+    transform: scale(1.05);
+}
+
+
+
+.show-image{
+    height: 55vh;
+}
+
+.btns{
+    display: flex;
+    gap: 1rem;
+}
+.show-card-text{
+    padding-top: 1rem;
+}
+
+.btn-dark{
+    color: #f8ebd3 !important;
+}
+
+.submit-review-btn{
+    background-color: rgb(156, 152, 152) !important ;
+    border: none !important;
+}
+
+.reviews-card-body{
+    background-color: #F9E2C3; /* Light pastel background */
+    color: #333333; /* Dark gray font color */
+    height: 100px; /* Adjust the height as needed */
+    overflow: scroll; /* Ensure text overflow is hidden */
+
+
+}
+
+.signup{
+    background-color: #fef6e6; /* Light pastel background */
+}
+.login{
+    background-color: #fef6e6; /* Light pastel background */
+}
+
+/* Customizing card and form */
+.signup-card, .login-card {
+    border: none;
+    border-radius: 15px;
+    background-color: #e0f2f1 !important; /* Baby blue background color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+/* Customizing input fields */
+.form-control {
+    border: 2px solid #80cbc4 !important;  /* Mint green border */
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Customizing button */
+.btn-primary {
+    background-color: #4db6ac !important;  /* Mint green button */
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px; /* Increase padding for better aesthetics */
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #26a69a !important;  /* Slightly darker mint green on hover */
+}
+
+/* Center the "Sign Up" button */
+.btn-container {
+    text-align: center; /* Align button to the center */
+}
+
+.navbar-nav .dropdown {
+    border: solid 1px transparent; /* Set initial border */
+    border-radius: 20px;
+    padding: 0.1rem 0.5rem;
+    transition: border-color 0.3s ease-in-out; /* Smooth transition effect */
+}
+
+.navbar-nav .dropdown:hover {
+    border-color: rgb(162, 162, 162); /* Change border color on hover */
+}
+li.dropdown:last-child .dropdown-menu {
+    right: 0;
+    left: auto;
+  }
+.edit-image-preview{
+    width:200px;
+    height:200px;
+}
+
+#map {
+    margin: 0 auto; /* Center horizontally */
+    display: block; /* Ensure the map is treated as a block element */
+    height: 400px;
+    width: 100%; /* Adjust width to fit the container */
+}
+
+
+
+#filters {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+ 
+}
+
+.filter {
+    text-align: center;
+    margin-right: 3rem;
+    margin-top: 2rem;
+    display: inline-block;
+    opacity: 0.8;
+    position: relative;
+}
+.filter:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+.filter::before{
+    content: "";
+    position: absolute;
+    background-color: rgb(74, 74, 74);
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0;
+    transition: width 0.3s ease;
+
+}
+.filter:hover::before{
+    /* opacity: 1;
+    cursor: pointer; */
+    width: 100%;
+
+}
+
+
+.form-switch {
+    border: 1.5px solid rgb(179, 179, 179); 
+    border-radius: 20px; 
+    padding-top: 0.875rem;
+    padding-bottom: 0.875rem;
+    margin-top: 20px;
+}
+.form-switch:hover{
+    border: 1.5px solid rgb(74, 74, 74);; 
+}
+
+
+
+.form-check-label {
+    margin-left: 10px; 
+    margin-right: 5px;
+}
+.tax-info{
+    display: none;
+}
+.navrightBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.navleftBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+}
+.stay-link{
+    margin-top: 3px;
+    font-size:1.3rem!important;
+}
+
+.form-inline {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+.navContainer{
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+}
+.searchBox{
+    margin-top: 18px;
+    padding: 0.4rem 1.2rem 0.4rem 1.2rem !important;
+    border-radius: 15px !important;
+    text-align: center;
+}
+
+.searchBtn{
+    border-radius: 15px !important;
+    padding: 0.3rem 1rem 0.3rem 1rem !important;
+}
+.searchBtn:hover{
+    background-color:#096f0d !important ;
+}
+
+@media only screen and (max-width: 1000px) {
+    .navrightBox{
+        display: none;
+  }    
+}
+@media only screen and (max-width: 1000px) {
+    .hide-one{
+        display: none;
+  }    
+}
+@media only screen and (max-width: 770px) {
+    .hide-two{
+        display: none;
+  }    
+}

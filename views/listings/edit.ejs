@@ -1,0 +1,84 @@
+<% layout("layouts/boilerplate") %>
+<body class="edit-page">
+    <div class="row">
+    <div class="col-6 mx-auto">
+    <h3 class="text-center mt-5 mb-4">Edit Listing </h3>
+    <form method="post" action="/listings/<%=listing._id%>?_method=PATCH" class="needs-validation" novalidate enctype="multipart/form-data">
+        <div class="mb-3"> 
+        <label for="title" class="form-label">Title</label>
+        <input type="text" name="listing[title]" class="form-control" value="<%= listing.title %>" required>
+        <div class="valid-feedback">Title updated successfully!</div>
+        <div class="invalid-feedback">Please enter a valid title.</div>
+        </div>
+
+        <div class="mb-3"> 
+            <label for="description" class="form-label">Description</label>
+            <textarea name="listing[description]" id="description"  class="form-control" placeholder="enter description" required></textarea>
+            <div class="valid-feedback">Description updated successfully!</div>
+            <div class="invalid-feedback">Please enter a short description.</div>
+        </div>
+
+        <div class="mb-3">
+            Original Listing Image
+            <div>
+                <img src="<%= originaUrl  %>" class="edit-image-preview">
+            </div>
+            
+        </div>
+
+        <div class="mb-3"> 
+        <label for="image" class="form-label">Upload New Image</label>
+        <input type="file" name="listing[image]" class="form-control">
+        <div class="valid-feedback">Image updated successfully!</div>
+        <div class="invalid-feedback">Please upload files in either JPG, JPEG, or PNG formats. 
+        </div>
+        </div>
+        <div class="mb-3">
+            <label for="category" class="form-label">Category</label>
+            <select class="form-select" name="listing[category]" id="category" required>
+                <option hidden selected>Select a category</option>
+                <option value="mountains">Mountains</option>
+                <option value="beaches">Beaches</option>
+                <option value="cities">Cities</option>
+                <option value="forests">Forests</option>
+                <option value="campings">Campings</option>
+                <option value="pools">Amazing Pools</option>
+                <option value="treehouses">Treehouses</option>
+                <option value="top-of-the-world">Top of the World</option>
+            </select>
+                <div class="valid-feedback">Category selected!</div>
+                <div class="invalid-feedback">Please select a category.</div>
+        </div>
+
+        <div class="row">
+            <div class="mb-3 col-md-4"> 
+                <label for="price" class="form-label">Price</label>
+                <input  name="listing[price]" class="form-control"    value="<%= listing.price %>" required>
+                <div class="valid-feedback">Price updated successfully!</div>
+                <div class="invalid-feedback">Please enter a price.</div>
+                </div>
+        
+                <div class="mb-3 col-md-8"> 
+                    <label for="country" class="form-label">Country</label>
+                <input type="text" name="listing[country]" class="form-control"   value="<%= listing.country %>" required>
+                <div class="valid-feedback">Country updated successfully!</div>
+                <div class="invalid-feedback">Please enter a valid country name.</div>
+                </div>
+        </div>
+
+        <div class="mb-3"> 
+            <label for="location" class="form-label">Location</label>
+            <input type="text" name="listing[location]" class="form-control"     value="<%= listing.location %>" required>
+            <div class="valid-feedback">Location updated successfully!</div>
+            <div class="invalid-feedback">Please enter a valid location.</div>
+        </div>
+
+        <div class="text-center">
+        <button  class="btn btn-dark mt-3 mb-5">Save</button>
+        </div>
+    </form>
+</div>
+</div>
+
+<script src="/js/script.js"></script>
+</body>

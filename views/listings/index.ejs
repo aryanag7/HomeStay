@@ -1,0 +1,71 @@
+<% layout("layouts/boilerplate") %>
+<body class="index-page">
+    
+
+    <!-- Category Icons Row -->
+    <div id="filters">
+        <div class="filter category" data-category="mountains">
+            <i class="fas fa-mountain"></i>
+            <p>Mountains</p>
+        </div>
+        <div class="filter category" data-category="beaches">
+          <i class="fa-solid fa-umbrella-beach"></i>
+            <p>Beaches</p>
+        </div>
+        <div class="filter category" data-category="cities">
+            <i class="fas fa-city"></i>
+            <p>Cities</p>
+        </div>
+        <div class="filter category" data-category="forests">
+            <i class="fas fa-tree"></i>
+            <p>Forests</p>
+        </div>
+        <div class="filter category" data-category="campings">
+          <i class="fa-solid fa-campground"></i>
+            <p>Campings</p>
+        </div>
+        <div class="filter category hide-two" data-category="pools">
+          <i class="fa-solid fa-person-swimming"></i>
+            <p>Amazing Pools</p>
+        </div>
+        <div class="filter category hide-two" data-category="treehouses">
+          <i class="fas fa-tree"></i>
+          <p>Treehouses</p>
+      </div>
+      <div class="filter category hide-one" data-category="top-of-the-world">
+        <i class="fa-brands fa-think-peaks"></i>
+        <p>Top of the world</p>
+        </div>
+      
+        <div class="form-check-reverse form-switch hide-one">
+            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+            <label class="form-check-label" for="flexSwitchCheckDefault">Display total after taxes</label>
+          </div>
+    </div>
+    <h2 class="text-center mt-4 index-heading">Discover Gateway Escapes.</h2>
+    <!-- Listings -->
+    <div class="row row-cols-lg-4 row-cols-md-3 row-cols-sm-2 row-cols-xs-1 index-listings">
+        <% for(let listing of allListings){ %>
+            <a href="/listings/<%= listing._id %>">
+                <div class="card index-page-card">
+                    <div class="card-img-top-wrapper" style="background-color: #fbfae5;">
+                        <img class="card-img-top" src="<%= listing.image.url %>" alt="Listing Image" style="height: 18rem;">
+                    </div>
+                    <div class="card-img-overlay"></div>
+                    <div class="card-body index-card-body">
+                        <p class="card-text">
+                            <b><i><%= listing.title %></i></b><br>  
+                            &#8377; <%= listing.price.toLocaleString("en-IN") %> / night
+                            <span class="tax-info">
+                                <i >&nbsp; +18% GST</i>
+                            </span>
+                           
+                        </p>
+                    </div>
+                </div>
+            </a>
+        <% } %>
+    </div>
+   <script src="/js/categoryFilter.js"></script>
+   <script src="/js/switchBtn.js"></script>
+</body>

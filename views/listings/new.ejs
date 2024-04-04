@@ -1,0 +1,77 @@
+<% layout("layouts/boilerplate") %>
+<body class="new-page">
+    <div class="row">
+    <div class="col-6 mx-auto">
+    <h3 class="text-center mt-5 mb-4">List Your Space.</h3>
+    <form method="post" class="needs-validation" action="/listings" novalidate enctype="multipart/form-data">
+        <div class="mb-3"> 
+            <label for="title" class="form-label">Title</label>
+            <input type="text" class="form-control" name="listing[title]" placeholder="Add a catchy title" id="title" required>
+            <div class="valid-feedback">Title looks great!</div>
+            <div class="invalid-feedback">Please enter a valid title.</div>
+        </div>
+       
+    
+        <div class="mb-3">
+            <label for="description" class="form-label">Description</label>
+            <textarea name="listing[description]" id="description" placeholder="Describe your dreamy getaway..." class="form-control" required></textarea>
+            <div class="valid-feedback">Description looks great!</div>
+            <div class="invalid-feedback">Please enter a short description.</div>
+        </div>
+
+       <div class="mb-3"> 
+            <label for="image" class="form-label">Upload Image</label>
+            <input type="file" name="listing[image]" class="form-control"   id="image" required>
+       </div>
+
+       <div class="mb-3">
+            <label for="category" class="form-label">Category</label>
+            <select class="form-select" name="listing[category]" id="category" required>
+                <option hidden selected>Select a category</option>
+                <option value="mountains">Mountains</option>
+                <option value="beaches">Beaches</option>
+                <option value="cities">Cities</option>
+                <option value="forests">Forests</option>
+                <option value="campings">Campings</option>
+                <option value="pools">Amazing Pools</option>
+                <option value="treehouses">Treehouses</option>
+                <option value="top-of-the-world">Top of the World</option>
+            </select>
+                <div class="valid-feedback">Category selected!</div>
+                <div class="invalid-feedback">Please select a category.</div>
+        </div>
+       <div class="row">
+            <div class="mb-3 col-md-4">
+                <label for="price" class="form-label">Price</label>
+                <input name="listing[price]" class="form-control" placeholder=1200 id="price" required>
+                <div class="valid-feedback">Price looks great!</div>
+                <div class="invalid-feedback">Please enter a price.</div>
+            </div>
+    
+            <div class="mb-3 col-md-8">
+                    <label for="country" class="form-label">Country</label>
+                    <input type="text" name="listing[country]"  class="form-control" placeholder="India" id="country" required>
+                    <div class="valid-feedback">Country looks great!</div>
+                    <div class="invalid-feedback">Please enter a valid country name.</div>
+            </div>
+       </div>
+       
+       <div class="mb-3">
+        <label for="location" class="form-label">Location</label>
+        <input type="text" name="listing[location]" class="form-control"  placeholder="Panjim, Goa" id="location" required>
+        <div class="valid-feedback">Location looks great!</div>
+        <div class="invalid-feedback">Please enter a valid location.</div>
+        </div>
+
+        <br>
+       <div class="text-center"> 
+        <button class="btn btn-dark mt-2.5 mb-3">Add Listing</button>
+       </div>
+       <br>
+       <br>
+
+    </form>
+</div>
+</div>
+    
+</body>
