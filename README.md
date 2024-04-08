@@ -1,8 +1,7 @@
 
 # Homestay
 
-The Homestay Project is a web application that provides a platform for hosts to list their properties for short-term rentals. Guests can discover and book these properties for their stay, offering a convenient way to find accommodation for travel and short-term stays.
-
+The Homestay Project is a web application that enables users to sign up and log in. Hosts can manage homestay listings, while guests can search and book properties by country and category. Guests can also leave reviews, and hosts can visually specify property locations on a map interface.
 
 
 
@@ -43,7 +42,7 @@ npm install
 - View detailed information about each homestay. 
 - Leave reviews and ratings for homestays you liked.
 
-
+  
 ## Screenshots
 
 Homepage
@@ -59,13 +58,35 @@ Listing Details
 
 User Signup & Login
 
-<img width="800" alt="image" src="https://github.com/aryanag7/HomeStay/assets/62555290/6440b80c-0c76-4f72-bc07-c2024cb45858">
-<img width="800" alt="image" src="https://github.com/aryanag7/HomeStay/assets/62555290/e2b5fec3-55e9-4311-bda6-811c2924ed3d">
+<img width="800" alt="image" src="https://github.com/aryanag7/HomeStay/assets/62555290/f2f8b469-5050-403c-bc0a-8056c86e0f39">
+<img width="800" alt="image" src="https://github.com/aryanag7/HomeStay/assets/62555290/d501b323-11c1-4c9f-a7c2-d226fb4257d2">
+
 
 Filtering & Searching
 
 <img width="800" alt="image" src="https://github.com/aryanag7/HomeStay/assets/62555290/b81db34f-4006-4196-bc64-3b0ba20c3096">
 <img width="800" alt="image" src="https://github.com/aryanag7/HomeStay/assets/62555290/26a0dfaa-a1fc-461d-977a-390c1435ce6d">
+
+
+## Usage
+
+- Register as a new user or log in with existing credentials.
+- Explore available homestays by searching or browsing through listings.
+- View detailed information about each homestay.
+- Leave reviews and ratings for homestays you have booked.
+
+## Contributing
+
+Contributions to this project are welcome! To contribute:
+
+- Fork the repository.
+- Create a new branch (git checkout -b feature/new-feature).
+- Commit your changes (git commit -am 'Add new feature').
+- Push to the branch (git push origin feature/new-feature).
+- Submit a pull request.
+
+
+
 
 
 
