@@ -35,12 +35,27 @@ Install dependencies:
 ```bash
 npm install
 ```
-## Usage
+Setting Up Environment Variables. Follow these steps to create and configure the .env file:
+- Create a new file named .env in the root directory of the project.
+- Copy and paste the following template into your .env file.
+```bash
+# Cloudinary Configuration
+CLOUD_NAME=your_cloud_name
+CLOUD_API_KEY=your_cloud_api_key
+CLOUD_API_SECRET=your_cloud_api_secret
 
-- Register as a new user or log in with existing credentials.
-- Explore available homestays by searching or browsing through listings.
-- View detailed information about each homestay. 
-- Leave reviews and ratings for homestays you liked.
+# Mapbox Configuration
+MAP_TOKEN=your_mapbox_token
+
+# MongoDB Atlas Configuration
+ATLASDB_URL=your_mongodb_atlas_url
+
+# Session Secret
+SECRET=your_session_secret
+```
+- Replace your_cloud_name, your_cloud_api_key, your_cloud_api_secret, your_mapbox_token, your_mongodb_atlas_url, and your_session_secret with your actual credentials obtained from the respective services.
+- Save the .env file in the root directory of your project.
+> **_NOTE:_** Ensure that you do not share your .env file or its contents publicly. Add .env to your .gitignore file to prevent it from being committed to version control.
 
   
 ## Screenshots
