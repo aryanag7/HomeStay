@@ -74,8 +74,8 @@ Listing Details
 User Signup & Login
 
 <img width="800" alt="image" src="https://github.com/aryanag7/HomeStay/assets/62555290/f2f8b469-5050-403c-bc0a-8056c86e0f39">
-<img width="800" alt="image" src="https://github.com/aryanag7/HomeStay/assets/62555290/d501b323-11c1-4c9f-a7c2-d226fb4257d2">
-
+<img width="800" alt="image" src="https://github.com/aryanag7/HomeStay/assets/62555290/d501b323-11c1-4c9f-a7c2-d226fb4257d2"><br><br>
+<br>
 
 Filtering & Searching
 
