@@ -80,7 +80,26 @@ User Signup & Login
 Filtering & Searching
 
 <img width="800" alt="image" src="https://github.com/aryanag7/HomeStay/assets/62555290/b81db34f-4006-4196-bc64-3b0ba20c3096">
-<img width="800" alt="image" src="https://github.com/aryanag7/HomeStay/assets/62555290/26a0dfaa-a1fc-461d-977a-390c1435ce6d">
+<img width="800" alt="image" src="https://github.com/aryanag7/HomeStay/assets/62555290/26a0dfaa-a1fc-461d-977a-390c1435ce6d"><br><br>
+<br>
+
+## Tech Stack
+
+- **Frontend:**
+  - HTML/CSS
+  - Bootstrap
+  - JavaScript
+
+- **Backend:**
+  - Node.js
+  - Express.js
+  - MongoDB (Atlas for database hosting)
+
+- **Cloud Services:**
+  - Cloudinary (for image storage and management)
+
+- **Mapping:**
+  - Mapbox (for visualizing property locations)
 
 
 ## Usage
