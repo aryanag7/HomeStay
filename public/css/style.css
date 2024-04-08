@@ -343,6 +343,52 @@ li.dropdown:last-child .dropdown-menu {
   }    
 }
 
+@media only screen and (max-width: 790px) {
+    .navmiddleBox{
+        display: none;
+  }
+  .navrightBox {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .navrightBox .dropdown-menu {
+    left: auto;
+    right: 0;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+    .show-image {
+      height: 40vh; /* Decrease image height on smaller screens */
+    }
+  
+    #map {
+      height: 200px; /* Decrease map height for smaller screens */
+    }
+    .col-4 {
+        width: 80%  !important; /* Increase width of col-4 to 80% of the parent container */
+        margin: 0 auto; /* Center-align the column */
+    }
+   .logSigBox{
+    display: none;
+   }
+   .card-img-overlay:hover{
+    opacity: 0;
+   }
+   .index-page-card:hover{
+    transform: none;
+   }
+
+   
+  
+}
+
+
+  
+
 .login-form{
     position: relative;
 
