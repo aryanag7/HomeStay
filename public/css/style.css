@@ -342,3 +342,14 @@ li.dropdown:last-child .dropdown-menu {
         display: none;
   }    
 }
+
+.login-form{
+    position: relative;
+
+}
+
+.login-form small {
+    position: absolute;
+    bottom: -20px; /* Adjust this value to move the text closer or further */
+    left: 0;
+}
