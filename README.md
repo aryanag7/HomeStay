@@ -24,7 +24,7 @@ The Homestay Project is a web application that enables users to sign up and log 
 Clone the repository:
 
 ```bash
- git clone https://github.com/yourusername/homestay-project.git
+ git clone https://github.com/aryanag7/homestay-project.git
 ```
 
 Navigate to the project directory:
