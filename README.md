@@ -1,10 +1,10 @@
-<h1 align="center">
+<div align="center">
  HomeStay
-</h1>
+
 
 The Homestay Project is a web application that enables users to sign up and log in. Hosts can manage homestay listings, while guests can search and book properties by country and category. Guests can also leave reviews, and hosts can visually specify property locations on a map interface.
 
-<div align="center">
+
 [View Demo](https://homestay-jewr.onrender.com/)
 </div>
 
